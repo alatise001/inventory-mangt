@@ -85,7 +85,7 @@ export default function Home() {
   function onSubmit(data) {
 
     const attendee = memberdata.find(item => item?.membershipNo === data?.membershipNo || item?.email === data?.emailAddress);
-    console.log(attendee);
+    // console.log(attendee);
 
     setFormData(prev => ({
       ...prev,
@@ -93,7 +93,7 @@ export default function Home() {
       adminemailAddress: data.emailAddress,
       adminattendees: attendee ? attendee : {}
     }));
-    console.log(data);
+    // console.log(data);
     router.push("/admin/userInfo");
   }
 

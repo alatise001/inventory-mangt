@@ -33,7 +33,7 @@ export default function AdminLayout({ children }) {
     const { isform, setFormData } = React.useContext(FormContext);
     const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
-    console.log(ADMIN_PASSWORD);
+    // console.log(ADMIN_PASSWORD);
 
     const form = useForm({
         resolver: zodResolver(formSchema),
@@ -45,7 +45,7 @@ export default function AdminLayout({ children }) {
 
 
     function onSubmit(data) {
-        console.log(data);
+        // console.log(data);
 
         if (data.password !== ADMIN_PASSWORD) {
             toast.error("Invalid Admin Password");

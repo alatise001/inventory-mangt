@@ -72,7 +72,7 @@ export default function Home() {
 
   function onSubmit(data) {
     const attendee = memberdata.filter(item => item?.membershipNo === data?.membershipNo || item?.email === data?.emailAddress);
-    console.log(attendee);
+    // console.log(attendee);
 
     setFormData(prev => ({
       ...prev,
@@ -80,7 +80,7 @@ export default function Home() {
       emailAddress: data.emailAddress,
       attendees: attendee.length > 0 ? attendee[0] : {}
     }));
-    console.log(data);
+    // console.log(data);
     router.push("/userInfo");
   }
 

@@ -91,7 +91,7 @@ const invoices = [
   },
 ];
 
-console.log(data);
+// console.log(data);
 
 export default function CheckedTable() {
   return (

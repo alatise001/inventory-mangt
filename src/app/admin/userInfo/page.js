@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import React from "react";
+import React, { Suspense } from "react";
 import {
   Tabs,
   TabsContent,
@@ -12,7 +12,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import attendeeData from "../../../../participantrecord.json"
 import { FormContext } from "@/contexts/formContext";
 
-export default function UserInformation() {
+function UserInformationContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const membershipNo = searchParams.get('membershipNo');
@@ -29,7 +29,7 @@ export default function UserInformation() {
     setIsAttendee(attendee || isform ? isform.adminattendees : null);
   }, [attendee, isform]);
 
-  console.log(isAttendee);
+
 
   const handleSaveItems = async (updatedData) => {
     try {
@@ -66,7 +66,7 @@ export default function UserInformation() {
           collectionStatus: updatedData.collectionStatus
         }
       }));
-      console.log('Items saved successfully:', result);
+      // console.log('Items saved successfully:', result);
       return result;
     } catch (error) {
       console.error('Error saving items:', error);
@@ -125,6 +125,14 @@ export default function UserInformation() {
 
 
     </div>
+  );
+}
+
+export default function UserInformation() {
+  return (
+    <Suspense fallback={<div className="w-[90%] flex flex-col gap-6 max-w-md text-white mx-auto mt-10 p-6 bg-white/10 rounded-lg">Loading...</div>}>
+      <UserInformationContent />
+    </Suspense>
   );
 }
 
