@@ -56,7 +56,7 @@ export default function AdminLayout({ children }) {
             ...prev,
             isAdmin: true
         }));
-        router.push("/userInfo");
+        // router.push("/userInfo");
     }
 
 
@@ -64,47 +64,50 @@ export default function AdminLayout({ children }) {
 
         <div className="min-h-screen backdrop-blur-sm">
 
-
-            <div className="w-[90%] flex flex-col gap-6 max-w-md text-white mx-auto mt-10 p-6 bg-white/10 rounded-lg shadow-md backdrop-blur-sm">
-                <form id="form-rhf-demo" onSubmit={form.handleSubmit(onSubmit)}>
-                    <FieldGroup>
-                        <Controller
-                            name="password"
-                            control={form.control}
-                            render={({ field, fieldState }) => (
-                                <Field data-invalid={fieldState.invalid}>
-                                    <FieldLabel htmlFor="form-rhf-demo-password">
-                                        Enter Admin Password
-                                    </FieldLabel>
-                                    <Input
-                                        {...field}
-                                        id="form-rhf-demo-password"
-                                        aria-invalid={fieldState.invalid}
-                                        placeholder="Enter your admin password"
-                                        autoComplete="off"
-                                    />
-                                    {fieldState.invalid && (
-                                        <FieldError errors={[fieldState.error]} />
+            {
+                isform?.isAdmin === false && (
+                    <div className="w-[90%] flex flex-col gap-6 max-w-md text-white mx-auto mt-10 p-6 bg-white/10 rounded-lg shadow-md backdrop-blur-sm">
+                        <form id="form-rhf-demo" onSubmit={form.handleSubmit(onSubmit)}>
+                            <FieldGroup>
+                                <Controller
+                                    name="password"
+                                    control={form.control}
+                                    render={({ field, fieldState }) => (
+                                        <Field data-invalid={fieldState.invalid}>
+                                            <FieldLabel htmlFor="form-rhf-demo-password">
+                                                Enter Admin Password
+                                            </FieldLabel>
+                                            <Input
+                                                {...field}
+                                                id="form-rhf-demo-password"
+                                                aria-invalid={fieldState.invalid}
+                                                placeholder="Enter your admin password"
+                                                autoComplete="off"
+                                            />
+                                            {fieldState.invalid && (
+                                                <FieldError errors={[fieldState.error]} />
+                                            )}
+                                        </Field>
                                     )}
-                                </Field>
-                            )}
-                        />
-                    </FieldGroup>
-                </form>
+                                />
+                            </FieldGroup>
+                        </form>
 
 
-                <Field orientation="horizontal">
-                    {/* <Button type="button" variant="outline" onClick={() => form.reset()}>
+                        <Field orientation="horizontal">
+                            {/* <Button type="button" variant="outline" onClick={() => form.reset()}>
                           Reset
                         </Button> */}
 
-                    <Button type="submit" variant="outline" form="form-rhf-demo">
-                        Submit
-                    </Button>
-                </Field>
+                            <Button type="submit" variant="outline" form="form-rhf-demo">
+                                Submit
+                            </Button>
+                        </Field>
 
-            </div>
+                    </div>
 
+                )
+            }
 
             {
                 isform?.isAdmin === true && (
