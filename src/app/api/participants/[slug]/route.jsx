@@ -24,18 +24,19 @@ export const GET = async (req) => {
       );
     }
 
-    return new NextResponse(
-      JSON.stringify({
+    return NextResponse.json(
+      {
         message: "Participant fetched successfully",
         data: participants,
-      }),
+      },
       { status: 200 },
     );
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
-    return new NextResponse("Error in fetching participant: " + message, {
-      status: 500,
-    });
+    return NextResponse.json(
+      { error: "Error in fetching participant: " + message },
+      { status: 500 },
+    );
   }
 };
 
