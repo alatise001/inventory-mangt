@@ -51,7 +51,6 @@ const config: runtime.GetPrismaClientConfig = {
     "db"
   ],
   "activeProvider": "mongodb",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -60,8 +59,8 @@ const config: runtime.GetPrismaClientConfig = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider      = \"prisma-client\"\n  output        = \"../generated/prisma\"\n  // Bundle both local (native) and Vercel (rhel-openssl-3.0.x) engines\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\ntype ParticipantsConferenceItems {\n  cap         Boolean\n  notebook    Boolean\n  pen         Boolean\n  tshirt      Boolean\n  waterBottle Boolean\n}\n\nmodel participants {\n  id                String                      @id @default(auto()) @map(\"_id\") @db.ObjectId\n  amountPaid        Int\n  approvedBy        String\n  collectionStatus  String\n  conferenceItems   ParticipantsConferenceItems\n  dateofBirth       String\n  discount          Int\n  districtSociety   String\n  email             String\n  event             String\n  eventFee          Int\n  gender            String\n  group             String\n  groupCollectedBy  String?\n  membershipNo      String\n  membershipStatus  String\n  membershipType    String\n  name              String\n  organisation      String\n  participationType String\n  paymentMethod     String\n  phoneNo           String\n  shirtSize         String\n  status            String\n}\n",
-  "inlineSchemaHash": "283fee72a141f08ab61ad8b2ce85e33158fdc5d7321def02f386d2c3adf694c3",
+  "inlineSchema": "generator client {\n  provider      = \"prisma-client\"\n  output        = \"../generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\ntype ParticipantsConferenceItems {\n  cap         Boolean\n  notebook    Boolean\n  pen         Boolean\n  tshirt      Boolean\n  waterBottle Boolean\n}\n\nmodel participants {\n  id                String                      @id @default(auto()) @map(\"_id\") @db.ObjectId\n  amountPaid        Int\n  approvedBy        String\n  collectionStatus  String\n  conferenceItems   ParticipantsConferenceItems\n  dateofBirth       String\n  discount          Int\n  districtSociety   String\n  email             String\n  event             String\n  eventFee          Int\n  gender            String\n  group             String\n  groupCollectedBy  String?\n  membershipNo      String\n  membershipStatus  String\n  membershipType    String\n  name              String\n  organisation      String\n  participationType String\n  paymentMethod     String\n  phoneNo           String\n  shirtSize         String\n  status            String\n}\n",
+  "inlineSchemaHash": "24f35c6ab3c7b9003983bd2b27ddbaa4f2ae44869554ed6bcae754daa6beaf89",
   "copyEngine": true,
   "runtimeDataModel": {
     "models": {},
