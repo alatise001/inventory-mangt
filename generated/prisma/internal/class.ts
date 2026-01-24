@@ -34,6 +34,10 @@ const config: runtime.GetPrismaClientConfig = {
         "fromEnvVar": null,
         "value": "windows",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-3.0.x"
       }
     ],
     "previewFeatures": [],
@@ -55,8 +59,8 @@ const config: runtime.GetPrismaClientConfig = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\ntype ParticipantsConferenceItems {\n  cap         Boolean\n  notebook    Boolean\n  pen         Boolean\n  tshirt      Boolean\n  waterBottle Boolean\n}\n\nmodel participants {\n  id                String                      @id @default(auto()) @map(\"_id\") @db.ObjectId\n  amountPaid        Int\n  approvedBy        String\n  collectionStatus  String\n  conferenceItems   ParticipantsConferenceItems\n  dateofBirth       String\n  discount          Int\n  districtSociety   String\n  email             String\n  event             String\n  eventFee          Int\n  gender            String\n  group             String\n  groupCollectedBy  String?\n  membershipNo      String\n  membershipStatus  String\n  membershipType    String\n  name              String\n  organisation      String\n  participationType String\n  paymentMethod     String\n  phoneNo           String\n  shirtSize         String\n  status            String\n}\n",
-  "inlineSchemaHash": "a1a4920f48eb7563a209bc52be4bf2690edeb89bcbe02216110b78b3e1b12302",
+  "inlineSchema": "generator client {\n  provider      = \"prisma-client\"\n  output        = \"../generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\ntype ParticipantsConferenceItems {\n  cap         Boolean\n  notebook    Boolean\n  pen         Boolean\n  tshirt      Boolean\n  waterBottle Boolean\n}\n\nmodel participants {\n  id                String                      @id @default(auto()) @map(\"_id\") @db.ObjectId\n  amountPaid        Int\n  approvedBy        String\n  collectionStatus  String\n  conferenceItems   ParticipantsConferenceItems\n  dateofBirth       String\n  discount          Int\n  districtSociety   String\n  email             String\n  event             String\n  eventFee          Int\n  gender            String\n  group             String\n  groupCollectedBy  String?\n  membershipNo      String\n  membershipStatus  String\n  membershipType    String\n  name              String\n  organisation      String\n  participationType String\n  paymentMethod     String\n  phoneNo           String\n  shirtSize         String\n  status            String\n}\n",
+  "inlineSchemaHash": "24f35c6ab3c7b9003983bd2b27ddbaa4f2ae44869554ed6bcae754daa6beaf89",
   "copyEngine": true,
   "runtimeDataModel": {
     "models": {},
