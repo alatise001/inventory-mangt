@@ -1,6 +1,13 @@
 import "dotenv/config";
 import { PrismaClient } from "../../generated/prisma/client";
 
-const prisma = new PrismaClient();
+// PrismaClient singleton for serverless environments
+const globalForPrisma = global;
 
-export { prisma };
+export const prisma = globalForPrisma.prisma || new PrismaClient({
+  log: ['error', 'warn'],
+});
+
+if (process.env.NODE_ENV !== 'production') {
+  globalForPrisma.prisma = prisma;
+}
