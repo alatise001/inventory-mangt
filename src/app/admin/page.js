@@ -75,8 +75,8 @@ export default function Home() {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      membershipNo: isform.adminmembershipNo || "",
-      emailAddress: isform.adminemailAddress || ""
+      membershipNo: "",
+      emailAddress: ""
 
     },
   })
@@ -91,7 +91,6 @@ export default function Home() {
       ...prev,
       adminmembershipNo: data.membershipNo,
       adminemailAddress: data.emailAddress,
-      adminattendees: attendee ? attendee : {}
     }));
     // console.log(data);
     router.push("/admin/userInfo");
@@ -137,14 +136,14 @@ export default function Home() {
           <form id="form-rhf-demo" className="flex flex-col mt-5 gap-5" onSubmit={form.handleSubmit(onSubmit)}>
 
 
-            <FieldGroup>
+            <FieldGroup className="flex flex-col gap-4">
               <Controller
                 name="membershipNo"
                 control={form.control}
                 render={({ field, fieldState }) => (
                   <Field data-invalid={fieldState.invalid}>
                     <FieldLabel htmlFor="form-rhf-demo-membership-no">
-                      Membership No
+                      Membership No (must be in capital letters e.g MB*****)
                     </FieldLabel>
                     <Input
                       {...field}
@@ -160,7 +159,9 @@ export default function Home() {
                 )}
               />
 
-
+              <p className="text-sm">
+                OR
+              </p>
 
               <Controller
                 name="emailAddress"

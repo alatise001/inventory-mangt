@@ -39,6 +39,7 @@ export default function RootLayout({ children }) {
                   alt="Vercel logomark"
                   width={84}
                   height={52}
+                  priority
                 />
               </Link>
             </header>

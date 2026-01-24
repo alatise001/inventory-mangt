@@ -19,7 +19,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { FormContext } from "@/contexts/formContext";
 import { useRouter } from "next/navigation";
-import memberdata from "../../participantrecord.json"
 
 
 const formSchema = z.object({
@@ -57,28 +56,29 @@ const formSchema = z.object({
   )
 
 export default function Home() {
+
+
   const router = useRouter();
   const { isform, setFormData } = React.useContext(FormContext);
   // console.log(data);
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      membershipNo: isform.membershipNo || "",
-      emailAddress: isform.emailAddress || ""
+      membershipNo: "",
+      emailAddress: ""
 
     },
   })
 
 
   function onSubmit(data) {
-    const attendee = memberdata.filter(item => item?.membershipNo === data?.membershipNo || item?.email === data?.emailAddress);
-    // console.log(attendee);
+    // const attendee = memberdata.filter(item => item?.membershipNo === data?.membershipNo || item?.email === data?.emailAddress);
+
 
     setFormData(prev => ({
       ...prev,
       membershipNo: data.membershipNo,
       emailAddress: data.emailAddress,
-      attendees: attendee.length > 0 ? attendee[0] : {}
     }));
     // console.log(data);
     router.push("/userInfo");
@@ -88,14 +88,14 @@ export default function Home() {
   return (
     <div className="w-[90%] flex flex-col gap-6 max-w-md text-white mx-auto mt-10 p-6 bg-white/10 rounded-lg shadow-md backdrop-blur-sm">
       <form id="form-rhf-demo" onSubmit={form.handleSubmit(onSubmit)}>
-        <FieldGroup>
+        <FieldGroup className="flex flex-col gap-4">
           <Controller
             name="membershipNo"
             control={form.control}
             render={({ field, fieldState }) => (
               <Field data-invalid={fieldState.invalid}>
                 <FieldLabel htmlFor="form-rhf-demo-membership-no">
-                  Membership No
+                  Membership No (must be in capital letters e.g MB*****)
                 </FieldLabel>
                 <Input
                   {...field}
@@ -111,7 +111,9 @@ export default function Home() {
             )}
           />
 
-
+          <p className="text-sm">
+            OR
+          </p>
 
           <Controller
             name="emailAddress"
