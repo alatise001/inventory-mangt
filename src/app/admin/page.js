@@ -98,7 +98,7 @@ export default function Home() {
 
 
   return (
-    <div className="w-[90%] flex flex-col gap-6 max-w-md text-white mx-auto mt-5 p-6  bg-white/10 rounded-lg shadow-md backdrop-blur-sm">
+    <div className="w-[90%] flex flex-col gap-6 max-w-md lg:max-w-5xl text-white mx-auto mt-5 p-6  bg-white/10 rounded-lg shadow-md backdrop-blur-sm">
 
       <h1 className="text-3xl font-bold">Admin Dashboard</h1>
 
