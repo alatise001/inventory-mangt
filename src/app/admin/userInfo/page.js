@@ -31,9 +31,7 @@ function UserInformationContent() {
     const fecthAttendee = async () => {
       try {
         setLoading(true);
-        const memberId = isform?.adminmembershipNo || '';
-        const memberEmail = isform?.adminemailAddress || '';
-        const response = await fetch(`/api/participants/search?memberId=${memberId}&memberEmail=${memberEmail}`);
+        const response = await fetch(`/api/participants/info?memberId=${isform.adminmembershipNo}&memberEmail=${isform.adminemailAddress}`);
         const data = await response.json();
         if (response.ok && data.data.length > 0) {
           // console.log(data);
