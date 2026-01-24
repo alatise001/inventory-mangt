@@ -6,7 +6,7 @@ export const FormContext = React.createContext();
 function FormContextProvider({ children }) {
     const [isform, setFormData] = React.useState(() => {
         if (typeof window !== 'undefined') {
-            const saved = localStorage.getItem("icanmemberinfo");
+            const saved = localStorage.getItem("icanMemberInfo");
             if (saved) {
                 return JSON.parse(saved);
             }
@@ -16,8 +16,6 @@ function FormContextProvider({ children }) {
             emailAddress: "",
             adminmembershipNo: "",
             adminemailAddress: "",
-            attendees: {},
-            adminattendees: {},
             isAdmin: false
 
         };
@@ -25,7 +23,7 @@ function FormContextProvider({ children }) {
 
     React.useEffect(() => {
         if (typeof window !== 'undefined') {
-            localStorage.setItem("icanmemberinfo", JSON.stringify(isform));
+            localStorage.setItem("icanMemberInfo", JSON.stringify(isform));
         }
     }, [isform]);
 

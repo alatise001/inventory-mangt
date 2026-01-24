@@ -9,10 +9,12 @@ import {
 } from "@/components/ui/tabs"
 import { ProductCheckboxes } from "@/components/productCheckboxes";
 import { useSearchParams, useRouter } from "next/navigation";
-import attendeeData from "../../../../participantrecord.json"
 import { FormContext } from "@/contexts/formContext";
+import Loading from "@/components/loading";
 
 function UserInformationContent() {
+
+
   const router = useRouter();
   const searchParams = useSearchParams();
   const membershipNo = searchParams.get('membershipNo');
@@ -20,28 +22,66 @@ function UserInformationContent() {
 
   const { isform, setFormData } = React.useContext(FormContext);
 
-  const attendee = attendeeData.find(item =>
-    item?.membershipNo === membershipNo || item?.email === email
-  );
   const [isAttendee, setIsAttendee] = React.useState();
+  const [groupMemberCount, setGroupMemberCount] = React.useState(0);
+  const [loading, setLoading] = React.useState(true);
+  const [emptyState, setEmptyState] = React.useState(false);
 
   React.useEffect(() => {
-    setIsAttendee(attendee || isform ? isform.adminattendees : null);
-  }, [attendee, isform]);
+    const fecthAttendee = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`/api/participants/info?memberId=${isform.adminmembershipNo}&memberEmail=${isform.adminemailAddress}`);
+        const data = await response.json();
+        if (response.ok && data.data.length > 0) {
+          // console.log(data);
+          const attendee = data.data[0];
+          setIsAttendee(attendee);
+          setLoading(false);
+
+          // Fetch group member count if participant is in a group
+          if (attendee.group && attendee.group.trim() !== "") {
+            const groupResponse = await fetch(`/api/participants?group=${encodeURIComponent(attendee.group)}`);
+            const groupData = await groupResponse.json();
+            if (groupResponse.ok) {
+              setGroupMemberCount(groupData.data.length);
+            }
+          } else {
+            setGroupMemberCount(0);
+          }
+        } else if (response.ok && data.data.length === 0) {
+          // setIsAttendee(null);
+          setEmptyState(true);
+          setLoading(false);
+        } else {
+          setIsAttendee(null);
+          setGroupMemberCount(0);
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error("Error fetching attendee:", error);
+        setIsAttendee(null);
+        setLoading(false);
+      }
+    };
+    fecthAttendee();
+  }, [isform]);
+
+  // React.useEffect(() => {
+  //   setIsAttendee(attendee || isform ? isform.adminattendees : null);
+  // }, [attendee, isform]);
 
 
 
   const handleSaveItems = async (updatedData) => {
     try {
-      const response = await fetch('/api/attendee/update-items', {
-        method: 'POST',
+      const response = await fetch(`/api/participants/info?id=${isAttendee.id}`, {
+        method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          membershipNo: isAttendee.membershipNo,
-          conferenceItems: updatedData.conferenceItems,
-          collectionStatus: updatedData.collectionStatus
+          conferenceItems: updatedData.conferenceItems
         })
       });
 
@@ -51,22 +91,10 @@ function UserInformationContent() {
       }
 
       const result = await response.json();
-      setFormData(prev => ({
-        ...prev,
 
-        adminattendees: {
-          ...prev.adminattendees,
-          conferenceItems: updatedData.conferenceItems,
-          collectionStatus: updatedData.collectionStatus
-        },
+      // Update local state with fresh data
+      setIsAttendee(result.data);
 
-        attendees: {
-          ...prev.attendees,
-          conferenceItems: updatedData.conferenceItems,
-          collectionStatus: updatedData.collectionStatus
-        }
-      }));
-      // console.log('Items saved successfully:', result);
       return result;
     } catch (error) {
       console.error('Error saving items:', error);
@@ -74,12 +102,18 @@ function UserInformationContent() {
     }
   };
 
-  if (!isAttendee) {
+  if (loading) {
+    return (
+      <Loading />
+    );
+  }
+
+  if (emptyState) {
     return (
       <div className="w-[90%] flex flex-col gap-6 max-w-md text-white mx-auto mt-10 p-6 bg-white/10 rounded-lg">
         <h2 className="text-2xl font-semibold">Attendee Not Found</h2>
         <p>No attendee found with membership number: {membershipNo} or email: {email}</p>
-        <button onClick={() => router.back()} className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">Go Back</button>
+        <button onClick={() => router.back()} className="px-4 py-2 border rounded hover:bg-blue-700">Go Back</button>
       </div>
     );
   }
@@ -106,6 +140,18 @@ function UserInformationContent() {
             <p className="text-md">Member&apos;s Status: {isAttendee.membershipStatus}</p>
             <p className="text-md">Membership Type: {isAttendee.membershipType}</p>
             <p className="text-md">Participant Type: {isAttendee.participationType}</p>
+
+            {isAttendee.group && isAttendee.group.trim() !== "" && (
+              <div className="mt-4 p-3 bg-blue-500/20 rounded-lg border border-blue-500/50">
+                <p className="text-md font-semibold">Group Information:</p>
+                <p className="text-md">This person is in group: <span className="font-bold">{isAttendee.group}</span></p>
+                <p className="text-md">Group has {groupMemberCount} member{groupMemberCount !== 1 ? 's' : ''}</p>
+                {isAttendee.groupCollectedBy && (
+                  <p className="text-md">Collected by: {isAttendee.groupCollectedBy}</p>
+                )}
+                <p className="text-sm mt-2 text-yellow-300">⚠️ Updating items will affect all group members</p>
+              </div>
+            )}
           </div>
         </TabsContent>
         <TabsContent value="product">
@@ -115,15 +161,8 @@ function UserInformationContent() {
             onSave={handleSaveItems}
             isAdmin={true}
           />
-
         </TabsContent>
-
-
       </Tabs>
-
-
-
-
     </div>
   );
 }
@@ -135,33 +174,3 @@ export default function UserInformation() {
     </Suspense>
   );
 }
-
-
-
-
-
-// <Field orientation="horizontal">
-//   <Button type="submit">Submit</Button>
-//   <Button variant="outline" type="button">
-//     Cancel
-//   </Button>
-// </Field>
-
-
-{/* <Image
-  className="dark:invert"
-  src="/vercel.svg"
-  alt="Vercel logomark"
-  width={16}
-  height={16}
-/> */}
-
-
-{/* <Image
-  className="dark:invert"
-  src="/next.svg"
-  alt="Next.js logo"
-  width={100}
-  height={20}
-  priority
-/> */}

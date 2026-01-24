@@ -27,7 +27,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB025286",
@@ -57,7 +58,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB064511",
@@ -87,7 +89,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB027004",
@@ -117,7 +120,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB011676",
@@ -128,7 +132,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Corporate Finance Group",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -147,7 +151,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB011500",
@@ -177,7 +182,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB042069",
@@ -207,7 +213,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB024416",
@@ -218,7 +225,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "District Society Group D",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "LAGOS STATE PUBLIC SERVICE",
@@ -237,7 +244,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB026871",
@@ -267,7 +275,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB056318",
@@ -278,7 +287,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Professional Accountants Team",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "IJEBU-ODE & DISTRICT",
@@ -297,7 +306,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB065131",
@@ -327,7 +337,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB059388",
@@ -357,7 +368,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB044689",
@@ -387,7 +399,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB004825",
@@ -417,7 +430,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB022473",
@@ -428,7 +442,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Tax Advisors Network",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "IBADAN & DISTRICT",
@@ -447,7 +461,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB015018",
@@ -458,7 +473,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Western Zone Group B",
   "membershipType": "Executive - Past & Present",
   "participationType": "Physical participant",
   "districtSociety": "IBADAN & DISTRICT",
@@ -477,7 +492,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB015356",
@@ -488,7 +504,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Audit Partners Collective",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "IKEJA & DISTRICT",
@@ -507,7 +523,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB019959",
@@ -518,7 +535,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Audit Partners Collective",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "OYO & DISTRICT",
@@ -537,7 +554,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB042752",
@@ -548,7 +566,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Accounting Professionals Group A",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "IKEJA & DISTRICT",
@@ -567,7 +585,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB040241",
@@ -597,7 +616,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB034449",
@@ -627,7 +647,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB052293",
@@ -638,7 +659,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Professional Accountants Team",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "LAGOS MAINLAND & DISTRICT",
@@ -657,7 +678,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB038539",
@@ -668,7 +690,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Tax Advisors Network",
   "membershipType": "Executive - Past & Present",
   "participationType": "Physical participant",
   "districtSociety": "OLUYOLE DISTRICT",
@@ -687,7 +709,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB063859",
@@ -717,7 +740,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB021167",
@@ -747,7 +771,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB057499",
@@ -777,7 +802,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB006249",
@@ -788,7 +814,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Professional Accountants Team",
   "membershipType": "Executive - Past & Present",
   "participationType": "Physical participant",
   "districtSociety": "OTA & DISTRICT SOCIETY",
@@ -807,7 +833,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB026081",
@@ -818,7 +845,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Corporate Finance Group",
   "membershipType": "Member",
   "participationType": "Virtual - With Conference Materials",
   "districtSociety": "IKEJA & DISTRICT",
@@ -837,7 +864,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB020418",
@@ -848,7 +876,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Tax Advisors Network",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -867,7 +895,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB018747",
@@ -897,7 +926,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB065153",
@@ -927,7 +957,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB053754",
@@ -957,7 +988,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB060081",
@@ -987,7 +1019,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB030229",
@@ -998,7 +1031,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Accounting Professionals Group A",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "SURULERE DISTRICT",
@@ -1017,7 +1050,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB063129",
@@ -1047,7 +1081,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB062312",
@@ -1077,7 +1112,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB058442",
@@ -1107,7 +1143,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB032477",
@@ -1118,7 +1155,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "District Society Group D",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "OTHERS",
@@ -1137,7 +1174,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB030004",
@@ -1167,7 +1205,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB020533",
@@ -1178,7 +1217,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "District Society Group D",
   "membershipType": "Member",
   "participationType": "Virtual - Without Conference Materials",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -1197,7 +1236,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB057100",
@@ -1227,7 +1267,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB022732",
@@ -1257,7 +1298,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB014191",
@@ -1287,7 +1329,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB035702",
@@ -1298,7 +1341,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Certified Group E",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "LAGOS & DISTRICT",
@@ -1317,7 +1360,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB008550",
@@ -1347,7 +1391,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB035972",
@@ -1358,7 +1403,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Western Zone Group B",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ALIMOSHO & DISTRICT",
@@ -1377,7 +1422,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB052239",
@@ -1388,7 +1434,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "District Society Group D",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -1407,7 +1453,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB067499",
@@ -1437,7 +1484,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB043267",
@@ -1448,7 +1496,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Corporate Finance Group",
   "membershipType": "Member",
   "participationType": "Virtual - With Conference Materials",
   "districtSociety": "IKORODU & DISTRICT",
@@ -1467,7 +1515,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB067289",
@@ -1497,7 +1546,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB061101",
@@ -1508,7 +1558,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "District Society Group D",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ABEOKUTA & DISTRICT",
@@ -1527,7 +1577,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB022696",
@@ -1557,7 +1608,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB009592",
@@ -1568,7 +1620,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Corporate Finance Group",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "IBADAN & DISTRICT",
@@ -1587,7 +1639,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB054863",
@@ -1617,7 +1670,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB041036",
@@ -1647,7 +1701,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB016623",
@@ -1677,7 +1732,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB065415",
@@ -1688,7 +1744,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Audit Partners Collective",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -1707,7 +1763,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB067722",
@@ -1718,7 +1775,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Certified Group E",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "AKURE & DISTRICT",
@@ -1737,7 +1794,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB053870",
@@ -1748,7 +1806,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "District Society Group D",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -1767,7 +1825,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB024217",
@@ -1797,7 +1856,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB020751",
@@ -1808,7 +1868,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Corporate Finance Group",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -1827,7 +1887,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB013105",
@@ -1857,7 +1918,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB032642",
@@ -1887,7 +1949,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "",
@@ -1917,7 +1980,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB026333",
@@ -1947,7 +2011,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB030505",
@@ -1958,7 +2023,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Corporate Finance Group",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -1977,7 +2042,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB025545",
@@ -1988,7 +2054,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "District Society Group D",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -2007,7 +2073,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB036946",
@@ -2018,7 +2085,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Western Zone Group B",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -2037,7 +2104,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB020345",
@@ -2067,7 +2135,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB025104",
@@ -2097,7 +2166,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB017071",
@@ -2108,7 +2178,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Professional Accountants Team",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -2127,7 +2197,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB021477",
@@ -2157,7 +2228,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB027036",
@@ -2187,7 +2259,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB033362",
@@ -2198,7 +2271,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Accounting Professionals Group A",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -2217,7 +2290,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB016321",
@@ -2247,7 +2321,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB019216",
@@ -2277,7 +2352,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB027607",
@@ -2307,7 +2383,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB027295",
@@ -2337,7 +2414,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB047752",
@@ -2367,7 +2445,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB019352",
@@ -2378,7 +2457,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Corporate Finance Group",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "AKOKO & DISTRICT",
@@ -2397,7 +2476,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB056429",
@@ -2427,7 +2507,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB044847",
@@ -2457,7 +2538,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "",
@@ -2468,7 +2550,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "ICAN Members Group C",
   "membershipType": "Non Member",
   "participationType": "Physical participant",
   "districtSociety": "",
@@ -2487,7 +2569,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "",
@@ -2517,7 +2600,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB026455",
@@ -2528,7 +2612,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Certified Group E",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -2547,7 +2631,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB022953",
@@ -2558,7 +2643,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Certified Group E",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -2577,7 +2662,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB035438",
@@ -2607,7 +2693,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB029667",
@@ -2618,7 +2705,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Audit Partners Collective",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -2637,7 +2724,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB040019",
@@ -2667,7 +2755,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB056481",
@@ -2678,7 +2767,7 @@
   "gender": "Female",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Audit Partners Collective",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -2697,7 +2786,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB029703",
@@ -2727,7 +2817,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB029828",
@@ -2738,7 +2829,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Audit Partners Collective",
   "membershipType": "Member",
   "participationType": "Physical participant",
   "districtSociety": "ILUPEJU/GBAGADA & DISTRICT",
@@ -2757,7 +2848,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB045984",
@@ -2787,7 +2879,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB034947",
@@ -2817,7 +2910,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "",
@@ -2847,7 +2941,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "",
@@ -2877,7 +2972,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "",
@@ -2888,7 +2984,7 @@
   "gender": "Male",
   "discount": 0,
   "status": "Approved",
-  "group": "",
+  "group": "Audit Partners Collective",
   "membershipType": "Non Member",
   "participationType": "Physical participant",
   "districtSociety": "",
@@ -2907,7 +3003,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB051311",
@@ -2937,7 +3034,8 @@
    "pen": false,
    "waterBottle": false
   },
-  "collectionStatus": "not_started"
+  "collectionStatus": "not_started",
+  "groupCollectedBy": null
  },
  {
   "membershipNo": "MB061675",
@@ -2967,6 +3065,7 @@
    "pen": true,
    "waterBottle": false
   },
-  "collectionStatus": "partial"
+  "collectionStatus": "partial",
+  "groupCollectedBy": null
  }
 ]

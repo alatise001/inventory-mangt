@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  // url      = env("DATABASE_URL")
+}
+
+type ParticipantsConferenceItems {
+  cap         Boolean
+  notebook    Boolean
+  pen         Boolean
+  tshirt      Boolean
+  waterBottle Boolean
+}
+
+model participants {
+  id                String                      @id @default(auto()) @map("_id") @db.ObjectId
+  amountPaid        Int
+  approvedBy        String
+  collectionStatus  String
+  conferenceItems   ParticipantsConferenceItems
+  dateofBirth       String
+  discount          Int
+  districtSociety   String
+  email             String
+  event             String
+  eventFee          Int
+  gender            String
+  group             String
+  groupCollectedBy  String?
+  membershipNo      String
+  membershipStatus  String
+  membershipType    String
+  name              String
+  organisation      String
+  participationType String
+  paymentMethod     String
+  phoneNo           String
+  shirtSize         String
+  status            String
+}
