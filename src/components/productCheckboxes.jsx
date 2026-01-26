@@ -22,18 +22,18 @@ import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   tshirt: z.boolean(),
-  cap: z.boolean(),
-  notebook: z.boolean(),
-  pen: z.boolean(),
-  waterBottle: z.boolean(),
+  bag: z.boolean(),
+  jotter: z.boolean(),
+  lanyard: z.boolean(),
+  galaniteticket: z.boolean(),
 });
 
 const ITEMS = [
   { id: "tshirt", label: "T-shirt" },
-  { id: "cap", label: "Cap" },
-  { id: "notebook", label: "Notebook" },
-  { id: "pen", label: "Pen" },
-  { id: "waterBottle", label: "Water Bottle" },
+  { id: "bag", label: "Bag" },
+  { id: "jotter", label: "Jotter" },
+  { id: "lanyard", label: "Lanyard" },
+  { id: "galaniteticket", label: "Gala Nite Ticket" },
 ];
 
 export function ProductCheckboxes({ attendeeData, onSave, isAdmin = false }) {
@@ -44,10 +44,10 @@ export function ProductCheckboxes({ attendeeData, onSave, isAdmin = false }) {
     resolver: zodResolver(formSchema),
     defaultValues: attendeeData?.conferenceItems || {
       tshirt: false,
-      cap: false,
-      notebook: false,
-      pen: false,
-      waterBottle: false,
+      bag: false,
+      jotter: false,
+      lanyard: false,
+      galaniteticket: false,
     },
   });
 
@@ -131,14 +131,14 @@ export function ProductCheckboxes({ attendeeData, onSave, isAdmin = false }) {
             >
               {isSaving ? "Saving..." : "Save Items"}
             </Button>
-            <Button
+            {/* <Button
               type="button"
               variant="outline"
               disabled={isSaving}
               onClick={() => router.push("/admin")}
             >
               DashBoard
-            </Button>
+            </Button> */}
           </div>
         )}
       </form>

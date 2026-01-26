@@ -10,10 +10,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { ScrollArea } from "@/components/ui/scroll-area";
-
-import { Checkbox } from "@/components/ui/checkbox";
-import data from "../../participantrecord.json";
 import Loading from "./loading";
 
 // console.log(data);
@@ -22,6 +18,7 @@ export default function CheckedTable() {
   const [isAttendee, setIsAttendee] = React.useState();
   const [loading, setLoading] = React.useState(true);
   const [emptyState, setEmptyState] = React.useState(false);
+  const [searchTerm, setSearchTerm] = React.useState("");
 
   React.useEffect(() => {
     const fecthAttendee = async () => {
@@ -73,8 +70,32 @@ export default function CheckedTable() {
     );
   }
 
+  const filteredAttendees = (isAttendee || []).filter((item) => {
+    const term = searchTerm.trim().toLowerCase();
+    if (!term) return true;
+    const tokens = term.split(/\s+/).filter(Boolean);
+    const haystack = [item?.membershipNo, item?.name, item?.email]
+      .filter(Boolean)
+      .map((value) => String(value).toLowerCase());
+
+    return tokens.every((token) =>
+      haystack.some(
+        (value) => value.startsWith(token) || value.includes(token),
+      ),
+    );
+  });
+
   return (
     <div className="h-96 lg:h-[65vh] w-full overflow-y-scroll">
+      <div className="mb-3 w-[80%]">
+        <input
+          type="text"
+          placeholder="Search by membership no, name, or email"
+          value={searchTerm}
+          onChange={(event) => setSearchTerm(event.target.value)}
+          className="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+        />
+      </div>
       <Table>
         <TableCaption>A list of complete collections.</TableCaption>
         <TableHeader>
@@ -87,7 +108,7 @@ export default function CheckedTable() {
         </TableHeader>
 
         <TableBody>
-          {isAttendee?.map((item) => (
+          {filteredAttendees.map((item) => (
             <TableRow key={item?.membershipNo}>
               <TableCell className="font-medium">
                 {item?.membershipNo}

@@ -9,11 +9,11 @@ datasource db {
 }
 
 type ParticipantsConferenceItems {
-  cap         Boolean
-  notebook    Boolean
-  pen         Boolean
+  bag         Boolean
+  jotter    Boolean
+  lanyard     Boolean
   tshirt      Boolean
-  waterBottle Boolean
+  galaniteticket Boolean
 }
 
 model participants {

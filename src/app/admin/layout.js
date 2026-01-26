@@ -20,6 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import { FormContext } from "@/contexts/formContext";
+import Loading from "@/components/loading";
 
 const formSchema = z.object({
     password: z
@@ -32,23 +33,22 @@ export default function AdminLayout({ children }) {
     const router = useRouter();
     const { isform, setFormData } = React.useContext(FormContext);
     const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+    const [loading, setLoading] = React.useState(true);
 
-    // console.log(ADMIN_PASSWORD);
 
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
             password: '',
-
         },
     })
 
 
     function onSubmit(data) {
-        // console.log(data);
-
+        setLoading(true);
         if (data.password !== ADMIN_PASSWORD) {
             toast.error("Invalid Admin Password");
+            setLoading(false);
             return;
         }
 
@@ -56,8 +56,22 @@ export default function AdminLayout({ children }) {
             ...prev,
             isAdmin: true
         }));
-        // router.push("/userInfo");
+        toast.success("Admin Access Granted");
+        setLoading(false);
+
     }
+
+
+    React.useEffect(() => {
+        setLoading(false);
+    }, []);
+
+    if (loading) {
+        return (
+            <Loading />
+        );
+    }
+
 
 
     return (
