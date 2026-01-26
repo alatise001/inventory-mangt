@@ -131,14 +131,14 @@ export function ProductCheckboxes({ attendeeData, onSave, isAdmin = false }) {
             >
               {isSaving ? "Saving..." : "Save Items"}
             </Button>
-            <Button
+            {/* <Button
               type="button"
               variant="outline"
               disabled={isSaving}
               onClick={() => router.push("/admin")}
             >
               DashBoard
-            </Button>
+            </Button> */}
           </div>
         )}
       </form>

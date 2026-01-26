@@ -11,6 +11,8 @@ import { ProductCheckboxes } from "@/components/productCheckboxes";
 import { useSearchParams, useRouter } from "next/navigation";
 import { FormContext } from "@/contexts/formContext";
 import Loading from "@/components/loading";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 function UserInformationContent() {
 
@@ -119,20 +121,37 @@ function UserInformationContent() {
     );
   }
 
-  if (emptyState) {
+  const isMissingSearchInputs =
+    !membershipNo &&
+    !email &&
+    !isform?.adminmembershipNo &&
+    !isform?.adminemailAddress;
+
+  if (emptyState || isMissingSearchInputs) {
     return (
       <div className="w-[90%] flex flex-col gap-6 max-w-md text-white mx-auto mt-10 p-6 bg-white/10 rounded-lg">
         <h2 className="text-2xl font-semibold">Attendee Not Found</h2>
         <p>No attendee found with membership number: {membershipNo} or email: {email}</p>
-        <button onClick={() => router.back()} className="px-4 py-2 border rounded hover:bg-blue-700">Go Back</button>
+        <button onClick={() => router.back()} className="px-4 py-2 border rounded ">Go Back</button>
       </div>
     );
   }
 
   return (
     <div className="w-[90%] items-center pt-4 rounded-[30px] border border-[rgba(238,238,238,0.80)] shadow-[0_0_12px_4px_rgba(255,255,255,0.01)_inset,0_42px_25px_0_rgba(0,0,0,0.05),0_5px_10px_0_rgba(0,0,0,0.10)] backdrop-blur-lg flex flex-col gap-6 max-w-md text-white mx-auto mt-5 p-6  bg-white/10">
+      <div className="flex justify-between items-center w-full">
 
-      <h1 className="text-3xl font-bold">Admin DashBoard</h1>
+        <h1 className="text-3xl font-bold">Admin </h1>
+        <Button variant="outline" className="w-fit mt-4" onClick={() => {
+          setFormData(prev => ({
+            ...prev,
+            adminmembershipNo: '',
+            adminemailAddress: '',
+          }));
+        }} >
+          <Link href="/admin" className="w-full h-full">Back to Dashboard</Link>
+        </Button>
+      </div>
 
       <Tabs defaultValue="attendeeInfo" className="self-center w-full gap-5">
         <TabsList className='flex self-center'>

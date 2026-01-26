@@ -108,7 +108,7 @@ export default function Home() {
 
         <TabsList className='flex gap-3 self-start'>
           <TabsTrigger value="attendeeInfo">Attendee&apos;s</TabsTrigger>
-          <TabsTrigger value="completed">Completed</TabsTrigger>
+          <TabsTrigger value="completed">Status Table</TabsTrigger>
         </TabsList>
 
 

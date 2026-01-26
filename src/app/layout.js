@@ -43,10 +43,10 @@ export default function RootLayout({ children }) {
                 />
               </Link>
             </header>
-            <div className="flex items-center h-6 px-4 py-2  w-fit cursor-pointer" onClick={() => window.history.back()}>
+            {/* <div className="flex items-center h-6 px-4 py-2  w-fit cursor-pointer" onClick={() => window.history.back()}>
               <IoChevronBack className="text-white h-4 w-4" />
               <p className="text-white ml-1 text-md">Back</p>
-            </div>
+            </div> */}
             {children}
           </div>
         </body>

@@ -12,6 +12,8 @@ import { FormContext } from "@/contexts/formContext";
 import { useRouter } from "next/navigation";
 import { ProductCheckboxes } from "@/components/productCheckboxes";
 import Loading from "@/components/loading";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function UserInformation() {
   const router = useRouter();
@@ -24,11 +26,11 @@ export default function UserInformation() {
     const fecthAttendee = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`/api/participants/info?memberId=${isform.membershipNo}&memberEmail=${isform.emailAddress}`);
+        const response = await fetch(`/api/participants/info?memberId=${isform?.membershipNo}&memberEmail=${isform?.emailAddress}`);
         const data = await response.json();
         if (response.ok && data.data.length > 0) {
           console.log(data);
-          setIsAttendee(data.data[0]);
+          setIsAttendee(data?.data[0]);
           setLoading(false);
         } else if (response.ok && data.data.length === 0) {
           // setIsAttendee(null);
@@ -54,12 +56,16 @@ export default function UserInformation() {
   }
 
 
-  if (emptyState) {
+  const isMissingSearchInputs =
+    !isform?.membershipNo &&
+    !isform?.emailAddress;
+
+  if (emptyState || isMissingSearchInputs) {
     return (
       <div className="w-[90%] flex flex-col gap-6 max-w-md text-white mx-auto mt-10 p-6 bg-white/10 rounded-lg">
         <h2 className="text-2xl font-semibold">Attendee Not Found</h2>
         <p>Please search for an attendee first</p>
-        <button onClick={() => router.back()} className="px-4 py-2 border rounded hover:bg-blue-700">Go Back</button>
+        <button onClick={() => router.back()} className="px-4 py-2 border rounded">Go Back</button>
       </div>
     );
   }
@@ -69,7 +75,7 @@ export default function UserInformation() {
       <>
         <div className="flex justify-center">
           <QRCodeCanvas
-            value={`${typeof window !== 'undefined' ? window.location.origin : ''}/admin/userInfo?membershipNo=${isAttendee.membershipNo}&email=${isAttendee.email}`}
+            value={`${typeof window !== 'undefined' ? window?.location?.origin : ''}/admin/userInfo?membershipNo=${isAttendee?.membershipNo}&email=${isAttendee?.email}`}
             size={264}
             level="H"
             includeMargin={true}
@@ -85,17 +91,17 @@ export default function UserInformation() {
           </TabsList>
           <TabsContent value="attendeeInfo">
             <div className="flex flex-col gap-2.5">
-              <h2 className="text-2xl font-semibold mb-2">{isAttendee.name}</h2>
-              <p className="text-md">Membership No: {isAttendee.membershipNo}</p>
-              <p className="text-md">Email: {isAttendee.email}</p>
-              <p className="text-md">Phone Number: {isAttendee.phoneNo}</p>
-              <p className="text-md">Gender: {isAttendee.gender}</p>
-              <p className="text-md">T-shirt Size: {isAttendee.shirtSize}</p>
-              <p className="text-md">District Society: {isAttendee.districtSociety}</p>
-              <p className="text-md">Member&apos;s Status: {isAttendee.membershipStatus}</p>
-              <p className="text-md">Membership Type: {isAttendee.membershipType}</p>
-              <p className="text-md">Participant Type: {isAttendee.participationType}</p>
-              <p className="text-md">Group: {isAttendee.group}</p>
+              <h2 className="text-2xl font-semibold mb-2">{isAttendee?.name}</h2>
+              <p className="text-md">Membership No: {isAttendee?.membershipNo}</p>
+              <p className="text-md">Email: {isAttendee?.email}</p>
+              <p className="text-md">Phone Number: {isAttendee?.phoneNo}</p>
+              <p className="text-md">Gender: {isAttendee?.gender}</p>
+              <p className="text-md">T-shirt Size: {isAttendee?.shirtSize}</p>
+              <p className="text-md">District Society: {isAttendee?.districtSociety}</p>
+              <p className="text-md">Member&apos;s Status: {isAttendee?.membershipStatus}</p>
+              <p className="text-md">Membership Type: {isAttendee?.membershipType}</p>
+              <p className="text-md">Participant Type: {isAttendee?.participationType}</p>
+              <p className="text-md">Group: {isAttendee?.group}</p>
             </div>
           </TabsContent>
           <TabsContent value="product">
@@ -105,6 +111,16 @@ export default function UserInformation() {
           </TabsContent>
         </Tabs>
       </>
+
+      <Button variant="outline" className="w-full mt-4" onClick={() => {
+        setFormData(prev => ({
+          ...prev,
+          membershipNo: '',
+          emailAddress: '',
+        }));
+      }} >
+        <Link href="/" className="w-full h-full">Back to Dashboard</Link>
+      </Button>
     </div>
   );
 }
