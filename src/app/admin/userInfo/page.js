@@ -24,6 +24,7 @@ function UserInformationContent() {
 
   const [isAttendee, setIsAttendee] = React.useState();
   const [groupMemberCount, setGroupMemberCount] = React.useState(0);
+  const [groupMembers, setGroupMembers] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const [emptyState, setEmptyState] = React.useState(false);
 
@@ -43,11 +44,16 @@ function UserInformationContent() {
           if (attendee.group && attendee.group.trim() !== "") {
             const groupResponse = await fetch(`/api/participants?group=${encodeURIComponent(attendee.group)}`);
             const groupData = await groupResponse.json();
-            if (groupResponse.ok) {
+            if (groupResponse.ok && Array.isArray(groupData.data)) {
               setGroupMemberCount(groupData.data.length);
+              setGroupMembers(groupData.data);
+            } else {
+              setGroupMemberCount(0);
+              setGroupMembers([]);
             }
           } else {
             setGroupMemberCount(0);
+            setGroupMembers([]);
           }
         } else if (response.ok && data.data.length === 0) {
           // setIsAttendee(null);
@@ -56,11 +62,14 @@ function UserInformationContent() {
         } else {
           setIsAttendee(null);
           setGroupMemberCount(0);
+          setGroupMembers([]);
           setLoading(false);
         }
       } catch (error) {
         console.error("Error fetching attendee:", error);
         setIsAttendee(null);
+        setGroupMemberCount(0);
+        setGroupMembers([]);
         setLoading(false);
       }
     };
@@ -70,6 +79,8 @@ function UserInformationContent() {
   // React.useEffect(() => {
   //   setIsAttendee(attendee || isform ? isform.adminattendees : null);
   // }, [attendee, isform]);
+
+  console.log(groupMembers);
 
 
 
@@ -148,6 +159,19 @@ function UserInformationContent() {
                 <p className="text-md">Group has {groupMemberCount} member{groupMemberCount !== 1 ? 's' : ''}</p>
                 {isAttendee.groupCollectedBy && (
                   <p className="text-md">Collected by: {isAttendee.groupCollectedBy}</p>
+                )}
+                {groupMembers.length > 0 && (
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold">Group members:</p>
+                    <ul className="mt-2 space-y-1 text-sm">
+                      {groupMembers.map((member) => (
+                        <li key={member.id} className="flex flex-col">
+                          <span className="font-medium">{member.name}</span>
+                          <span className="text-xs opacity-80">{member.membershipNo} • {member.email} • {member.participationType}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
                 <p className="text-sm mt-2 text-yellow-300">⚠️ Updating items will affect all group members</p>
               </div>

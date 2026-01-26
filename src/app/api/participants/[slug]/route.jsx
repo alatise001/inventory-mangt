@@ -76,11 +76,11 @@ export const PATCH = async (req) => {
 
     // Normalize conference items with defaults
     const normalizedItems = {
-      cap: conferenceItems.cap ?? false,
-      notebook: conferenceItems.notebook ?? false,
-      pen: conferenceItems.pen ?? false,
+      bag: conferenceItems.bag ?? false,
+      jotter: conferenceItems.jotter ?? false,
+      lanyard: conferenceItems.lanyard ?? false,
       tshirt: conferenceItems.tshirt ?? false,
-      waterBottle: conferenceItems.waterBottle ?? false,
+      galaniteticket: conferenceItems.galaniteticket ?? false,
     };
 
     // Check if participant is in a group
