@@ -30,11 +30,14 @@ function UserInformationContent() {
   const [loading, setLoading] = React.useState(true);
   const [emptyState, setEmptyState] = React.useState(false);
 
+  const memberId = membershipNo || isform?.adminmembershipNo;
+  const memberEmail = email || isform?.adminemailAddress;
+
   React.useEffect(() => {
     const fecthAttendee = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`/api/participants/info?memberId=${isform.adminmembershipNo}&memberEmail=${isform.adminemailAddress}`);
+        const response = await fetch(`/api/participants/info?memberId=${memberId || ""}&memberEmail=${memberEmail || ""}`);
         const data = await response.json();
         if (response.ok && data.data.length > 0) {
           // console.log(data);
@@ -76,7 +79,7 @@ function UserInformationContent() {
       }
     };
     fecthAttendee();
-  }, [isform]);
+  }, [isform, memberId, memberEmail]);
 
   // React.useEffect(() => {
   //   setIsAttendee(attendee || isform ? isform.adminattendees : null);
@@ -122,10 +125,8 @@ function UserInformationContent() {
   }
 
   const isMissingSearchInputs =
-    !membershipNo &&
-    !email &&
-    !isform?.adminmembershipNo &&
-    !isform?.adminemailAddress;
+    !memberId &&
+    !memberEmail;
 
   if (emptyState || isMissingSearchInputs) {
     return (
@@ -138,7 +139,7 @@ function UserInformationContent() {
   }
 
   return (
-    <div className="w-[90%] items-center pt-4 rounded-[30px] border border-[rgba(238,238,238,0.80)] shadow-[0_0_12px_4px_rgba(255,255,255,0.01)_inset,0_42px_25px_0_rgba(0,0,0,0.05),0_5px_10px_0_rgba(0,0,0,0.10)] backdrop-blur-lg flex flex-col gap-6 max-w-md text-white mx-auto mt-5 p-6  bg-white/10">
+    <div className="w-[90%]  items-center pt-4 rounded-[30px] border border-[rgba(238,238,238,0.80)] shadow-[0_0_12px_4px_rgba(255,255,255,0.01)_inset,0_42px_25px_0_rgba(0,0,0,0.05),0_5px_10px_0_rgba(0,0,0,0.10)] backdrop-blur-lg flex flex-col gap-6 md:max-w-md sm:max-w-md lg:max-w-[90%]  text-white mx-auto my-10 p-6  bg-white/10">
       <div className="flex justify-between items-center w-full">
 
         <h1 className="text-3xl font-bold">Admin </h1>
@@ -159,20 +160,22 @@ function UserInformationContent() {
           <TabsTrigger value="product">Conference Materials</TabsTrigger>
         </TabsList>
         <TabsContent value="attendeeInfo">
-          <div className="flex flex-col gap-2.5">
-            <h2 className="text-2xl font-semibold mb-2">{isAttendee.name}</h2>
-            <p className="text-md">Membership No: {isAttendee.membershipNo}</p>
-            <p className="text-md">Email: {isAttendee.email}</p>
-            <p className="text-md">Phone Number: {isAttendee.phoneNo}</p>
-            <p className="text-md">Gender: {isAttendee.gender}</p>
-            <p className="text-md">T-shirt Size: {isAttendee.shirtSize}</p>
-            <p className="text-md">District Society: {isAttendee.districtSociety}</p>
-            <p className="text-md">Member&apos;s Status: {isAttendee.membershipStatus}</p>
-            <p className="text-md">Membership Type: {isAttendee.membershipType}</p>
-            <p className="text-md">Participant Type: {isAttendee.participationType}</p>
+          <div className="flex flex-col lg:flex-row gap-2.5">
+            <div className="flex flex-col lg:w-1/2 gap-1">
+              <h2 className="text-2xl font-semibold mb-2">{isAttendee.name}</h2>
+              <p className="text-md">Membership No: {isAttendee.membershipNo}</p>
+              <p className="text-md">Email: {isAttendee.email}</p>
+              <p className="text-md">Phone Number: {isAttendee.phoneNo}</p>
+              <p className="text-md">Gender: {isAttendee.gender}</p>
+              <p className="text-md">T-shirt Size: {isAttendee.shirtSize}</p>
+              <p className="text-md">District Society: {isAttendee.districtSociety}</p>
+              <p className="text-md">Member&apos;s Status: {isAttendee.membershipStatus}</p>
+              <p className="text-md">Membership Type: {isAttendee.membershipType}</p>
+              <p className="text-md">Participant Type: {isAttendee.participationType}</p>
+            </div>
 
             {isAttendee.group && isAttendee.group.trim() !== "" && (
-              <div className="mt-4 p-3 bg-blue-500/20 rounded-lg border border-blue-500/50">
+              <div className="mt-4 p-3 bg-blue-500/20 rounded-lg border border-blue-500/50 lg:w-1/2 lg:h-[60vh] overflow-y-auto">
                 <p className="text-md font-semibold">Group Information:</p>
                 <p className="text-md">This person is in group: <span className="font-bold">{isAttendee.group}</span></p>
                 <p className="text-md">Group has {groupMemberCount} member{groupMemberCount !== 1 ? 's' : ''}</p>
