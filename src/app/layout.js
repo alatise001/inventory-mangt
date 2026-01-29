@@ -5,6 +5,7 @@ import Image from "next/image";
 import FormContextProvider from "@/contexts/formContext";
 import { IoChevronBack } from "react-icons/io5";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
               <p className="text-white ml-1 text-md">Back</p>
             </div> */}
             {children}
+            <Analytics />
           </div>
         </body>
       </html>
