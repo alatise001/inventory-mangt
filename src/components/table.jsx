@@ -48,6 +48,43 @@ export default function CheckedTable() {
     fecthAttendee();
   }, []);
 
+  const handleDownloadCsv = React.useCallback(() => {
+    const rows = [
+      ["Membership No", "Name", "Email", "Status"],
+      ...(isAttendee || []).map((item) => [
+        item?.membershipNo ?? "",
+        item?.name ?? "",
+        item?.email ?? "",
+        item?.collectionStatus ?? "",
+      ]),
+    ];
+
+    const csvContent = rows
+      .map((row) =>
+        row
+          .map((cell) => {
+            const value = String(cell ?? "");
+            const escaped = value.replace(/"/g, '""');
+            return /[\n",]/.test(value) ? `"${escaped}"` : escaped;
+          })
+          .join(","),
+      )
+      .join("\r\n");
+
+    const bom = "\uFEFF";
+    const blob = new Blob([bom + csvContent], {
+      type: "text/csv;charset=utf-8;",
+    });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "attendees.csv";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }, [isAttendee]);
+
   if (loading) {
     return <Loading />;
   }
@@ -87,14 +124,24 @@ export default function CheckedTable() {
 
   return (
     <div className="h-96 lg:h-[65vh] w-full overflow-y-scroll">
-      <div className="mb-3 w-[80%]">
-        <input
-          type="text"
-          placeholder="Search by membership no, name, or email"
-          value={searchTerm}
-          onChange={(event) => setSearchTerm(event.target.value)}
-          className="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
-        />
+      <div className="mb-3 flex w-full flex-col gap-3 flex-row items-center justify-around">
+        <div className="w-full sm:w-[70%] lg:w-[50%]">
+          <input
+            type="text"
+            placeholder="Search by membership no, name, or email"
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            className="w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+          />
+        </div>
+        <button
+          type="button"
+          onClick={handleDownloadCsv}
+          className="rounded-md border border-white/20 bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/20"
+          disabled={!isAttendee || isAttendee.length === 0}
+        >
+          Download
+        </button>
       </div>
       <Table>
         <TableCaption>A list of complete collections.</TableCaption>
