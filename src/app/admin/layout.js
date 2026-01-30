@@ -76,7 +76,7 @@ export default function AdminLayout({ children }) {
 
     return (
 
-        <div className="min-h-screen backdrop-blur-sm">
+        <div className="backdrop-blur-sm">
 
             {
                 isform?.isAdmin === false && (

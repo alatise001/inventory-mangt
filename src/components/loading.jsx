@@ -3,13 +3,13 @@ import React from "react";
 
 export default function Loading() {
   return (
-    <div className="h-[80vh] flex justify-center items-center">
+    <div className="h-[70vh] flex justify-center items-center">
       <Image
         className=" "
         src="/loading.svg"
         alt="Vercel logomark"
-        width={250}
-        height={250}
+        width={200}
+        height={200}
       />
     </div>
   );
